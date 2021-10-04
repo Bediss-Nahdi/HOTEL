@@ -12,6 +12,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -20,38 +22,41 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@NoArgsConstructor
 @Data
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @ToString
-public class Hotel implements Serializable {
+public class Client implements Serializable {
 
 	@Id @GeneratedValue (strategy=GenerationType.IDENTITY)
-	@Column(name = "hotel_id", nullable = false)
-	private long hotel_id;
+	@Column(name = "client_id", nullable = false)
+	private long client_id;
 
 	@Column(name = "nom")
 	private String nom;
 
-	@Column(name = "nombre_etoiles")
-	private int etoiles;
+	@Column(name = "prenom")
+	private String prenom;
+
+//	@Column(name = "mot_de_passe")
+//	private String moteDePasse;
 
 	@Embedded
 	private Adresse adresse;
 
-	@Column(name = "telephone")
-	private String telephone;
+	@Column(name = "photo")
+	private String photo;
 
-	@Column(name = "email")
+	@Column(name = "mail")
 	private String email;
 
-	// Ce qui a été modifié % à l'exo
-	// private String adresse;
-	// private Ville ville;
+	@Column(name = "numero_telephone")
+	private String telephone;
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "hotel")
-	private List<Resa> resa;
+//	@OneToMany(fetch = FetchType.EAGER, mappedBy = "client")
+//	private List<Resa> resa;
+
 
 }

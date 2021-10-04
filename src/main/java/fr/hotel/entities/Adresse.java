@@ -5,7 +5,10 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,32 +18,31 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
+
+@Getter
+@Setter
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-@Getter @Setter
 @Embeddable
-@Entity
+
 public class Adresse implements Serializable {
 
-	@Id
-    @Column(name = "id", nullable = false)
-	private long id;
-	
-  @Column(name = "adresse1")
-  private String adresse1;
 
-  @Column(name = "adresse2")
-  private String adresse2;
+	@Column(name = "adresse1")
+	private String adresse1;
 
-  @Column(name = "ville")
-  private String ville;
+	@Column(name = "adresse2")
+	private String adresse2;
 
-  @Column(name = "code_postale")
-  private String codePostale;
+	@Column(name = "ville")
+	private String ville;
 
-  @Column(name = "pays")
-  private String pays;
+	@Column(name = "code_postale")
+	private String codePostale;
+
+	@Column(name = "pays")
+	private String pays;
 
 }
