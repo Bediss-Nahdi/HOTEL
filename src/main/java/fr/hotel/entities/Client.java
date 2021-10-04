@@ -15,12 +15,13 @@ import javax.persistence.OneToMany;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-
+@Builder // Class qui permet de créer un builder ==> constuire un objet exposant des méthodes contenant le même nom que les attributs de class + build.
 @Entity
 @Data
 @Getter
@@ -57,6 +58,12 @@ public class Client implements Serializable {
 
 //	@OneToMany(fetch = FetchType.EAGER, mappedBy = "client")
 //	private List<Resa> resa;
+	
+	@Column(name = "username", unique = true)
+	private String username;
+
+	@Column(name = "password")
+	private String password;
 
 
 }
