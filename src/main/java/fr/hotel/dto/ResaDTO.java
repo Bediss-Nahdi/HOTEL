@@ -19,7 +19,7 @@ public class ResaDTO {
 	private Date dateFin;
 
 	
-	private int numeroChambre;
+	private Integer numeroChambre;
 
 	
 	private HotelDTO hotel;
@@ -47,7 +47,7 @@ public class ResaDTO {
 	      return null;
 	    }
 	    Resa resa = new Resa();
-	    resa.setId(resaDTO.getId());
+	    resa.setResa_id(resaDTO.getId());
 	    resa.setDateDebut(resaDTO.getDateDebut());
 	    resa.setDateFin(resaDTO.getDateFin());
 	    resa.setNumeroChambre(resaDTO.getNumeroChambre());

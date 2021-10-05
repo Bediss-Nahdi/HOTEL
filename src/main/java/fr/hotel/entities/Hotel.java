@@ -37,7 +37,7 @@ public class Hotel implements Serializable {
 	private String nom;
 
 	@Column(name = "nombre_etoiles")
-	private int etoiles;
+	private Integer etoiles;
 
 	@Embedded
 	private Adresse adresse;

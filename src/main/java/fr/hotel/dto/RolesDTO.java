@@ -1,7 +1,6 @@
 package fr.hotel.dto;
 
 import fr.hotel.entities.Roles;
-import fr.hotel.entities.RolesDTO;
 import lombok.Builder;
 import lombok.Data;
 @Builder

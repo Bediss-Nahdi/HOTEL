@@ -16,7 +16,7 @@ public class HotelDTO {
 	private String nom;
 
 	
-	private int etoiles;
+	private Integer etoiles;
 
 	
 	private AdresseDTO adresse;

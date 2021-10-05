@@ -29,7 +29,8 @@ import lombok.ToString;
 @ToString
 public class Resa implements Serializable {
 
-	@Id @GeneratedValue (strategy=GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "resa_id", nullable = false)
 	private long resa_id;
 
@@ -40,7 +41,7 @@ public class Resa implements Serializable {
 	private Date dateFin;
 
 	@Column(name = "numero_Chambre")
-	private int numeroChambre;
+	private Integer numeroChambre;
 
 	@ManyToOne
 	@JoinColumn(name = "hotel_id")
@@ -49,10 +50,5 @@ public class Resa implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "client_id")
 	private Client client;
-
-	public void setId(long id) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }
