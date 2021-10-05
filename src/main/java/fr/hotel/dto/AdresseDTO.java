@@ -1,5 +1,6 @@
 package fr.hotel.dto;
 
+import fr.hotel.entities.Adresse;
 import lombok.Builder;
 import lombok.Data;
 @Builder
@@ -19,4 +20,35 @@ public class AdresseDTO {
 
 
 	private String pays;
+	
+	
+	 public static AdresseDTO fromEntity(Adresse adresse) {
+		    if (adresse == null) {
+		      return null;
+		    }
+
+		    return AdresseDTO.builder()
+		        .adresse1(adresse.getAdresse1())
+		        .adresse2(adresse.getAdresse2())
+		        .codePostale(adresse.getCodePostale())
+		        .ville(adresse.getVille())
+		        .pays(adresse.getPays())
+		        .build();
+		  }
+
+	 
+	 
+	 
+		  public static Adresse toEntity(AdresseDTO adresseDto) {
+		    if (adresseDto == null) {
+		      return null;
+		    }
+		    Adresse adresse = new Adresse();
+		    adresse.setAdresse1(adresseDto.getAdresse1());
+		    adresse.setAdresse2(adresseDto.getAdresse2());
+		    adresse.setCodePostale(adresseDto.getCodePostale());
+		    adresse.setVille(adresseDto.getVille());
+		    adresse.setPays(adresseDto.getPays());
+		    return adresse;
+		  }
 }

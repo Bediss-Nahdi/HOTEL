@@ -19,7 +19,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-@Builder
+
 @Entity
 @Data
 @Getter
@@ -31,7 +31,7 @@ public class Resa implements Serializable {
 
 	@Id @GeneratedValue (strategy=GenerationType.IDENTITY)
 	@Column(name = "resa_id", nullable = false)
-	private long hotel_id;
+	private long resa_id;
 
 	@Column(name = "date_de_debut")
 	private Date dateDebut;
@@ -49,5 +49,10 @@ public class Resa implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "client_id")
 	private Client client;
+
+	public void setId(long id) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

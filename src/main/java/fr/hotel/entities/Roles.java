@@ -16,7 +16,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@Builder
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -27,8 +27,12 @@ public class Roles implements Serializable {
 
 	@Id @GeneratedValue (strategy=GenerationType.IDENTITY)
 	@Column(name = "role_id", nullable = false)
-	private long hotel_id;
+	private long role_id;
 
 	@Column(name = "role_name")
 	private String role;
+	
+	
+	
+	
 }

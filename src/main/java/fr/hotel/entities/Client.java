@@ -21,7 +21,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-@Builder // Class qui permet de créer un builder ==> constuire un objet exposant des méthodes contenant le même nom que les attributs de class + build.
+//@Builder // Class qui permet de créer un builder ==> constuire un objet exposant des méthodes contenant le même nom que les attributs de class + build.
 @Entity
 @Data
 @Getter

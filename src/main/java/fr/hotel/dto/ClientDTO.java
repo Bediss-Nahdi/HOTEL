@@ -1,5 +1,6 @@
 package fr.hotel.dto;
 
+import fr.hotel.entities.Client;
 import lombok.Builder;
 import lombok.Data;
 @Builder
@@ -33,8 +34,40 @@ public class ClientDTO {
 //	private List<Resa> resa;
 	
 	
-	private String username;
-
+//	private String username;
+//
+//	
+//	private String password;
 	
-	private String password;
+	
+	public static ClientDTO fromEntity(Client client) {
+	    if (client == null) {
+	      return null;
+	    }
+	    return ClientDTO.builder()
+	        .id(client.getClient_id())
+	        .nom(client.getNom())
+	        .prenom(client.getPrenom())
+	        .adresse(AdresseDTO.fromEntity(client.getAdresse()))
+	        .photo(client.getPhoto())
+	        .email(client.getEmail())
+	        .telephone(client.getTelephone())
+	        .build();
+	  }
+
+	  public static Client toEntity(ClientDTO dto) {
+	    if (dto == null) {
+	      return null;
+	    }
+	    Client client = new Client();
+	    client.setClient_id(dto.getId());
+	    client.setNom(dto.getNom());
+	    client.setPrenom(dto.getPrenom());
+	    client.setAdresse(AdresseDTO.toEntity(dto.getAdresse()));
+	    client.setPhoto(dto.getPhoto());
+	    client.setEmail(dto.getEmail());
+	    client.setTelephone(dto.getTelephone());
+	    
+	    return client;
+	  }
 }
