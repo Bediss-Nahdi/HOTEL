@@ -3,6 +3,8 @@ package fr.hotel.exceptions;
 import java.util.List;
 import lombok.Getter;
 
+
+// 3 // Exception qui sera levée si on essai d'enregistrer dans la BDD (sans succès)
 public class InvalidEntityException extends RuntimeException {
 
   @Getter

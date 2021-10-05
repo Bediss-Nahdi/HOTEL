@@ -2,6 +2,8 @@ package fr.hotel.exceptions;
 
 import lombok.Getter;
 
+
+// 2 // Exception générique : si on fait une recherche dans la BDD mais que l'on retrouve pas
 public class EntityNotFoundException extends RuntimeException {
 
   @Getter
