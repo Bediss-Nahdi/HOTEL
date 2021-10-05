@@ -26,7 +26,7 @@ public class Admin {
 	@Id
 	@GeneratedValue (strategy=GenerationType.IDENTITY)
 	@Column(name = "admin_id", nullable = false)
-	private Long admin_id;
+	private Integer admin_id;
 
 	
 	@Column(name = "username", unique = true)

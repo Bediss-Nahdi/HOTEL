@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 public class HotelDTO {
 
-	private long id;
+	private Integer id;
 	
 	private String nom;
 

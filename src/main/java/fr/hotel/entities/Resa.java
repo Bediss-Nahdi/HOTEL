@@ -32,7 +32,7 @@ public class Resa implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "resa_id", nullable = false)
-	private long resa_id;
+	private Integer resa_id;
 
 	@Column(name = "date_de_debut")
 	private Date dateDebut;

@@ -3,11 +3,12 @@ package fr.hotel.dto;
 import fr.hotel.entities.Roles;
 import lombok.Builder;
 import lombok.Data;
+
 @Builder
 @Data
 public class RolesDTO {
 
-	private long id;
+	private Integer id;
 
 	
 	private String role;

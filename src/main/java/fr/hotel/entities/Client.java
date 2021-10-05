@@ -33,7 +33,7 @@ public class Client implements Serializable {
 
 	@Id @GeneratedValue (strategy=GenerationType.IDENTITY)
 	@Column(name = "client_id", nullable = false)
-	private long client_id;
+	private Integer client_id;
 
 	@Column(name = "nom")
 	private String nom;

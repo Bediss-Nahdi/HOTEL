@@ -8,7 +8,7 @@ import lombok.Data;
 public class ClientDTO {
 
 	
-	private long id;
+	private Integer id;
 
 
 	private String nom;

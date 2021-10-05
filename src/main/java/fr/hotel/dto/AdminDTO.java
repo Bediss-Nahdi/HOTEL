@@ -4,13 +4,19 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import fr.hotel.entities.Admin;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 @Builder
 @Data
+@AllArgsConstructor @NoArgsConstructor
+@Getter @Setter
 public class AdminDTO {
 
-	private long id;
+	private Integer id;
 
 	private String username;
 

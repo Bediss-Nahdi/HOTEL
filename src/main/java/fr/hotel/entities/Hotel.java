@@ -31,7 +31,7 @@ public class Hotel implements Serializable {
 
 	@Id @GeneratedValue (strategy=GenerationType.IDENTITY)
 	@Column(name = "hotel_id", nullable = false)
-	private long hotel_id;
+	private Integer hotel_id;
 
 	@Column(name = "nom")
 	private String nom;

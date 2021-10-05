@@ -11,7 +11,7 @@ import lombok.Data;
 public class ResaDTO {
 
 
-	private long id;
+	private Integer id;
 	
 	private Date dateDebut;
 

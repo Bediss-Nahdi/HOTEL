@@ -3,8 +3,9 @@ package fr.hotel.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import fr.hotel.entities.Client;
+import fr.hotel.entities.Resa;
+
 @Repository
-public interface ClientRepository extends JpaRepository<Client, Integer> {
+public interface ResaRepository extends JpaRepository<Resa, Integer> {
 
 }
