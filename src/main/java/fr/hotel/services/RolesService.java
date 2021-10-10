@@ -7,7 +7,7 @@ import fr.hotel.dto.RolesDTO;
 public interface RolesService {
 
 	
-	RolesDTO save(RolesDTO dto);
+	RolesDTO save(RolesDTO role);
 
 	RolesDTO findById(Integer id);
 

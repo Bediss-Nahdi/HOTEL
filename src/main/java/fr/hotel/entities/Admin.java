@@ -34,6 +34,10 @@ public class Admin {
 
 	@Column(name = "password")
 	private String password;
+	
+//	@Column(name = "enabled")		==> actif ou non actif
+//	private Boolean enabled;
+
 
 	
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)

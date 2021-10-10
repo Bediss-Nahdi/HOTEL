@@ -14,10 +14,15 @@ public interface AdminService {
 	List<AdminDTO> findAll();
 
 	void delete(Integer id);
+	
 
 	AdminDTO findByUsername(String username);
-
+	
 	RolesDTO addRole (RolesDTO dto);
+	
+	AdminDTO addRoleToUser(String username, String rolename);
+
+	
 
 	List<AdminDTO> findAllAdminByIdRole(Integer idRole);
 

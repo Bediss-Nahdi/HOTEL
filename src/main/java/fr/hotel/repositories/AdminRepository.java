@@ -12,4 +12,6 @@ public interface AdminRepository extends JpaRepository<Admin, Integer> {
 	
 	 /* SELECT * FROM admin WHERE username = :username OR password = :password*/
 	public Admin findByUsernameOrPassword(String username, String password);
+	
+	Admin findByUsername(String username);
 }

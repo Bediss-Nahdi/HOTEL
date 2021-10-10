@@ -13,6 +13,7 @@ import fr.hotel.dto.AdminDTO;
 import fr.hotel.dto.RolesDTO;
 import fr.hotel.entities.Admin;
 import fr.hotel.repositories.AdminRepository;
+import fr.hotel.repositories.RolesRepository;
 import fr.hotel.services.AdminService;
 
 
@@ -21,7 +22,12 @@ public class AdminServiceImpl implements AdminService{
 	
 	@Autowired
 	AdminRepository adminRepository;
+	
+	@Autowired
+	RolesRepository roleRepository;
 
+	
+	
 	@Override
 	public AdminDTO save(AdminDTO dto) {
 		return AdminDTO.fromEntity(adminRepository.save(AdminDTO.toEntity(dto)));
@@ -66,6 +72,12 @@ public class AdminServiceImpl implements AdminService{
 
 	@Override
 	public List<AdminDTO> findAllAdminByIdRole(Integer idRole) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AdminDTO addRoleToUser(String username, String rolename) {
 		// TODO Auto-generated method stub
 		return null;
 	}
